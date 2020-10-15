@@ -1,7 +1,7 @@
 import React from 'react';
-import Cabecera from './componentes/Cabecera';
+// import Cabecera from './componentes/Cabecera';
 import './index.css';
-//import Personajes from './componentes/Personajes';
+import Personajes from './componentes/Personajes';
 
 class App extends React.Component{
 
@@ -9,23 +9,15 @@ class App extends React.Component{
     personajes : []
   }
 
-  consultarApi = () => {
-
-    const url = 'http://hp-api.herokuapp.com/api/characters';
-
-    fetch(url)
-    .then(respuesta => respuesta.json())
-    .then(resultado => this.setState({personajes: resultado}))
-  }
-
   componentDidMount(){
-    this.consultarApi();
+    fetch('http://hp-api.herokuapp.com/api/characters')
+    .then(respuesta => respuesta.json())
+    .then(respuesta => this.setState({personajes: respuesta}))
   }
-  render(
 
-  ){
+  render(){
     return(
-      <Cabecera parame={this.state.personajes}/>
+      <Personajes parame={this.state.personajes}/>
     )
   }
 }

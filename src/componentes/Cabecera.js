@@ -3,6 +3,16 @@ import React from 'react';
 
 class Cabecera extends React.Component{
 
+    constructor(props){
+        super(props);
+
+        this.state = {
+            data : this.props.parame
+        }
+
+    }
+    
+
     render(){
         return(
             <div className="cabecera">
@@ -18,7 +28,9 @@ class Cabecera extends React.Component{
                         <a href="#">Casas</a>
                     </nav>
                 </div>
-                {console.log(this.props.parame)}
+                <div>
+                    {console.log(this.state.data)}
+                </div>
             </div>
         )
     }
