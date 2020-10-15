@@ -6,14 +6,19 @@ class Cabecera extends React.Component{
     render(){
         return(
             <div className="cabecera">
-                <h1>Harry Potter</h1>
-                <nav className="navegacion">
-                    <a href="#">Principal</a>
-                    <a href="#">Personajes</a>
-                    <a href="#">Estudiantes</a>
-                    <a href="#">Profesores</a>
-                    <a href="#">Casas</a>
-                </nav>
+                <div>
+                    <a href="#"><h1>Harry Potter</h1></a>
+                </div>
+                <div>
+                    <nav className="navegacion">
+                        <a href="#">Principal</a>
+                        <a href="#">Personajes</a>
+                        <a href="#">Estudiantes</a>
+                        <a href="#">Profesores</a>
+                        <a href="#">Casas</a>
+                    </nav>
+                </div>
+                {console.log(this.props.parame)}
             </div>
         )
     }

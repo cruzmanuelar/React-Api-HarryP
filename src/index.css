@@ -1,20 +1,19 @@
 body{
-  margin: 0;
+  margin: 0 auto;
 }
 .cabecera{
+  width: 100vw;
   text-align: center;
-  font-size: 1rem;
+  color:white;
+  font-family: 'Architects Daughter', cursive;
   background: rgb(0,212,255);
   background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(9,9,121,1) 0%, rgba(2,0,36,1) 100%);
 }
 h1{
   display:inline-block;
-  color:white;
-  font-family: 'Architects Daughter', cursive;
   font-weight: 700;
 }
 .navegacion{
-  font-family: 'Architects Daughter', cursive;
   height: 2.5rem;
   background: rgb(29,29,36);
   background: linear-gradient(90deg, rgba(29,29,36,1) 0%, rgba(1,9,10,1) 0%, rgba(2,0,36,1) 100%);  
@@ -24,7 +23,13 @@ h1{
 }
 a{
   color: white;
-  display: inline-block;
   text-decoration: none;
   margin: 0 1rem;
+  flex-wrap: nowrap;
+}
+nav a{
+  font-size: 1rem;
+}
+nav a:hover{
+  color:yellow;
 }
