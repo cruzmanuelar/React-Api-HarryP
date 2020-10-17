@@ -1,22 +1,33 @@
+:root {
+  --main-bg-color: rgb(29,29,36);
+  --main-bg-color: linear-gradient(90deg, rgba(29,29,36,1) 0%, rgba(1,9,10,1) 0%, rgba(2,0,36,1) 100%);
+}
+
 body{
   margin: 0 auto;
+  color:white;
 }
 .cabecera{
-  /* width: 100vw; */
   text-align: center;
-  color:white;
+  /* color:white; */
   font-family: 'Architects Daughter', cursive;
-  background: rgb(0,212,255);
-  background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(9,9,121,1) 0%, rgba(2,0,36,1) 100%);
+  background: var(--main-bg-color);
+  /* background: rgb(29,29,36);
+  background: linear-gradient(90deg, rgba(29,29,36,1) 0%, rgba(1,9,10,1) 0%, rgba(2,0,36,1) 100%); */
 }
+
 h1{
   display:inline-block;
   font-weight: 700;
 }
 .navegacion{
   height: 2.5rem;
-  background: rgb(29,29,36);
-  background: linear-gradient(90deg, rgba(29,29,36,1) 0%, rgba(1,9,10,1) 0%, rgba(2,0,36,1) 100%);  
+  -webkit-box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.75);
+  background: var(--main-bg-color);
+  /* background: rgb(29,29,36);
+  background: linear-gradient(90deg, rgba(29,29,36,1) 0%, rgba(1,9,10,1) 0%, rgba(2,0,36,1) 100%);   */
   justify-content: space-between;
   align-items: center;
   display: flex;
@@ -36,7 +47,7 @@ nav a:hover{
 
 .Pprincipales{
   font-family: 'Architects Daughter', cursive;
-  color:white;
+  /* color:white; */
   text-align: center;
   margin: 0 auto;
   background: rgb(0,212,255);
@@ -47,28 +58,108 @@ nav a:hover{
   margin:0;
   padding: .6rem;
   font-weight: 500;
+  font-size: 1.3rem;
+  cursor: pointer;
+  display: inline-block;
 }
 
-.contenedorPP{
-  padding:1rem;
-  background: aqua;
-  text-align: center;
-  height: 100%;
-  font-family: 'Architects Daughter', cursive;
-  display: flex;
-  flex-wrap: wrap;
-}
-.tarjeta{
-  align-items: center;
-  justify-content: center;
-  width: 20%;
-  height: 5rem;
-  box-sizing: content-box;
-  padding: 1rem;
-}
-
-.imagen{
+#imagen{
   width: 9rem;
   height: 9rem;
+  margin: 0.4rem;
   border-radius: 5%;
+}
+
+.contenedor{
+  background: rgb(0,212,255);
+  background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(9,9,121,1) 0%, rgba(2,0,36,1) 100%);
+  display: flex;
+  flex-wrap: wrap;
+  font-family: 'Architects Daughter', cursive;
+}
+
+.info{
+  margin:0.5rem;
+}
+
+.caja{
+  text-align: center;
+  background: var(--main-bg-color);
+  /* background: rgb(29,29,36);
+  background: linear-gradient(90deg, rgba(29,29,36,1) 0%, rgba(1,9,10,1) 0%, rgba(2,0,36,1) 100%);   */
+  margin: 1rem 0;
+  width: 18%;
+  height: auto;
+  box-sizing: border-box;
+  margin: 1%;
+  border-radius: 3%;
+  color:white;
+  -webkit-box-shadow: 2px 3px 13px 1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 2px 3px 13px 1px rgba(0,0,0,0.75);
+  box-shadow: 2px 3px 13px 1px rgba(0,0,0,0.75);
+  cursor: pointer;
+}
+
+.infoTarjeta p{
+  margin: 0.4rem;
+}
+
+@media screen and (max-width: 900px) {
+  .caja{
+      text-align: center;
+      background: var(--main-bg-color);
+      /* background: rgb(29,29,36);
+      background: linear-gradient(90deg, rgba(29,29,36,1) 0%, rgba(1,9,10,1) 0%, rgba(2,0,36,1) 100%);   */
+      margin: 1rem 0;
+      width: 23%;
+      height: auto;
+      box-sizing: border-box;
+      margin: 1%;
+      border-radius: 3%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .caja{
+      text-align: center;
+      background: var(--main-bg-color);
+      /* background: rgb(29,29,36);
+      background: linear-gradient(90deg, rgba(29,29,36,1) 0%, rgba(1,9,10,1) 0%, rgba(2,0,36,1) 100%);   */
+      margin: 1rem 0;
+      width: 31%;
+      height: auto;
+      box-sizing: border-box;
+      margin: 1%;
+      border-radius: 3%;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .caja{
+      text-align: center;
+      background: var(--main-bg-color);
+      /* background: rgb(29,29,36);
+      background: linear-gradient(90deg, rgba(29,29,36,1) 0%, rgba(1,9,10,1) 0%, rgba(2,0,36,1) 100%);   */
+      margin: 1rem 0;
+      width: 48%;
+      height: auto;
+      box-sizing: border-box;
+      margin: 1%;
+      border-radius: 3%;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .caja{
+      text-align: center;
+      background: var(--main-bg-color);
+      /* background: rgb(29,29,36);
+      background: linear-gradient(90deg, rgba(29,29,36,1) 0%, rgba(1,9,10,1) 0%, rgba(2,0,36,1) 100%);   */
+      margin: 1rem 0;
+      width: 98%;
+      height: auto;
+      box-sizing: border-box;
+      margin: 1%;
+      border-radius: 3%;
+  }
 }

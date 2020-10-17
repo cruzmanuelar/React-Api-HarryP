@@ -18,15 +18,17 @@ class Personajes extends React.Component{
         if(this.state.personajes.length === 0) return null;
         
         return(
-            <div className="contenedorPP">
+            <div className="contenedor">
                 {this.state.personajes.map(person => (
-                    <div className="tarjeta">
-                            <div><img className="imagen" alt="Foto Personaje" src={person.image}/></div>
-                            <div>Nombre: {person.name}</div>
-                            <div>Actor: {person.actor}</div>
-                            <div>Género: {person.gender}</div>
-                            <div>Especie: {person.species}</div>
-                                
+                    <div className="caja">
+                        <div className="info">
+                            <img id="imagen" alt="Imagen" src={person.image}/>
+                            <div className="infoTarjeta">
+                                <p><strong>Actor:</strong> {person.actor}</p>
+                                <p><strong>Nombre:</strong> {person.name}</p>
+                                <p><strong>Especie:</strong> {person.species}</p>
+                            </div>
+                        </div>
                     </div>
                 ))}
             </div>
@@ -38,7 +40,7 @@ class Personajes extends React.Component{
         return(
             <div>
                 <div className="Pprincipales">
-                    <h3 className="tituloPP">Personajes Principales</h3>
+                    <h3 className="tituloPP">Personajes</h3>
                 </div>
                 {this.mostrarPersonajes()}
             </div>
