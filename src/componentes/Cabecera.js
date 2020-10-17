@@ -1,17 +1,8 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
+// import './index.css';
 
 class Cabecera extends React.Component{
-
-    constructor(props){
-        super(props);
-
-        this.state = {
-            data : this.props.parame
-        }
-
-    }
-    
 
     render(){
         return(
@@ -27,9 +18,6 @@ class Cabecera extends React.Component{
                         <a href="#">Profesores</a>
                         <a href="#">Casas</a>
                     </nav>
-                </div>
-                <div>
-                    {console.log(this.state.data)}
                 </div>
             </div>
         )

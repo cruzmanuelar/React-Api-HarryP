@@ -1,15 +1,12 @@
 import React from 'react';
-// import Imagen from './Imagen';
 
 class Personajes extends React.Component{
 
     state = {
         personajes : []
-      }
+    }
 
     componentDidMount(){
-
-        // this.setState({personajes:["Manuel"]})
     
         fetch('http://hp-api.herokuapp.com/api/characters')
         .then(respuesta => respuesta.json())
@@ -21,10 +18,16 @@ class Personajes extends React.Component{
         if(this.state.personajes.length === 0) return null;
         
         return(
-
-            <div>
+            <div className="contenedorPP">
                 {this.state.personajes.map(person => (
-                        console.log(person.name)
+                    <div className="tarjeta">
+                            <div><img className="imagen" alt="Foto Personaje" src={person.image}/></div>
+                            <div>Nombre: {person.name}</div>
+                            <div>Actor: {person.actor}</div>
+                            <div>Género: {person.gender}</div>
+                            <div>Especie: {person.species}</div>
+                                
+                    </div>
                 ))}
             </div>
         )
@@ -34,6 +37,9 @@ class Personajes extends React.Component{
     render(){
         return(
             <div>
+                <div className="Pprincipales">
+                    <h3 className="tituloPP">Personajes Principales</h3>
+                </div>
                 {this.mostrarPersonajes()}
             </div>
         )

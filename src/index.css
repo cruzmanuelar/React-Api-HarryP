@@ -2,7 +2,7 @@ body{
   margin: 0 auto;
 }
 .cabecera{
-  width: 100vw;
+  /* width: 100vw; */
   text-align: center;
   color:white;
   font-family: 'Architects Daughter', cursive;
@@ -32,4 +32,43 @@ nav a{
 }
 nav a:hover{
   color:yellow;
+}
+
+.Pprincipales{
+  font-family: 'Architects Daughter', cursive;
+  color:white;
+  text-align: center;
+  margin: 0 auto;
+  background: rgb(0,212,255);
+  background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(9,9,121,1) 0%, rgba(2,0,36,1) 100%);
+}
+
+.tituloPP{
+  margin:0;
+  padding: .6rem;
+  font-weight: 500;
+}
+
+.contenedorPP{
+  padding:1rem;
+  background: aqua;
+  text-align: center;
+  height: 100%;
+  font-family: 'Architects Daughter', cursive;
+  display: flex;
+  flex-wrap: wrap;
+}
+.tarjeta{
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  height: 5rem;
+  box-sizing: content-box;
+  padding: 1rem;
+}
+
+.imagen{
+  width: 9rem;
+  height: 9rem;
+  border-radius: 5%;
 }
