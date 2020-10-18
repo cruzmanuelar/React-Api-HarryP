@@ -63,6 +63,13 @@ h1{
   background: var(--sec-bg-color);
 }
 
+
+.contenedorImagenes img{
+  width: 23%;
+  margin:1%;
+  height: 20rem;
+}
+
 #imagen{
   width: 9rem;
   height: 9rem;

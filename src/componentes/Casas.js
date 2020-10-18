@@ -4,6 +4,10 @@ import Slytherin from './Casas/Slytherin';
 import Ravenclaw from './Casas/Ravenclaw';
 import Hufflepuff from './Casas/Hufflepuff';
 import Gryffindor from './Casas/Gryffindor';
+import Gry from '../img/gry.jpg';
+import Hu from '../img/hu.jpg';
+import Raven from '../img/raven.jpg';
+import Sy from '../img/sy.jpg';
 
 
 class Casas extends React.Component{
@@ -36,31 +40,10 @@ class Casas extends React.Component{
         .then(respuesta => respuesta.json())
         .then(respuesta => this.setState({gryffindor: respuesta}))
     }
-
-    mostrarCasas = () => {
-
-        if(this.state.casas.length === 0) return null;
-        
-        return(
-            <div className="contenedor">
-                {this.state.casas.map(person => (
-                    <div key={person.actor} className="caja">
-                        <div className="info">
-                            <img id="imagen" alt="Imagen" src={person.image}/>
-                            <div className="infoTarjeta">
-                                <p><strong>Actor:</strong> {person.actor}</p>
-                                <p><strong>Nombre:</strong> {person.name}</p>
-                                <p><strong>Especie:</strong> {person.species}</p>
-                            </div>
-                        </div>
-                    </div>
-                ))}
-            </div>
-        )
-    }
     
     render(){
         return(
+            <React.Fragment>
             <div>
                 <Router>
                     <div className="navegacion">
@@ -95,6 +78,13 @@ class Casas extends React.Component{
                     </Route>
                 </Router>
             </div>
+            <div className="contenedorImagenes">
+                    <img src={Gry} alt="Casas"/>
+                    <img src={Hu} alt="Casas"/>
+                    <img src={Raven} alt="Casas"/>
+                    <img src={Sy} alt="Casas"/>
+            </div>
+            </React.Fragment>
         )
     }
 }
