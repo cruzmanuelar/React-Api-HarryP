@@ -35,6 +35,19 @@ h1{
   font-family: 'Architects Daughter', cursive;
 }
 
+#navegacionCasas{
+  height: 2.5rem;
+  -webkit-box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.75);
+  background: var(--main-bg-color);
+  justify-content: space-between;
+  align-items: center;
+  display: none;
+  flex-wrap: nowrap;
+  font-family: 'Architects Daughter', cursive;
+}
+
 .enlace{
   font-size: 1rem;
   color: white;

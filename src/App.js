@@ -13,7 +13,9 @@ class App extends React.Component{
     personajes:[],
     estudiantes:[],
     profesores:[],
-    casas:[]
+    casas:[],
+    menuT:"flex",
+    menuF:"none"
   }
 
   componentDidMount(){
@@ -29,10 +31,14 @@ class App extends React.Component{
     fetch('http://hp-api.herokuapp.com/api/characters/staff')
     .then(respuesta => respuesta.json())
     .then(respuesta => this.setState({profesores: respuesta}))
+  }
 
-    fetch('http://hp-api.herokuapp.com/api/characters/house/Slytherin')
-    .then(respuesta => respuesta.json())
-    .then(respuesta => this.setState({casas: respuesta}))
+  menuCasas = () => {
+
+    // var menuC = document.getElementById('navegacionCasas');
+    // menuC.style.display = 'flex';
+
+    console.log("Testa");
 
   }
 
@@ -49,6 +55,12 @@ class App extends React.Component{
           <Link to="/profesores" className="enlace">Profesores</Link>
           <Link to="/casas" className="enlace">Casas</Link>
         </div>
+        <div id="navegacionCasas">
+          <Link to="/personajes" className="enlace">Gryffindor</Link>
+          <Link to="/estudiantes" className="enlace">Hufflepuff</Link>
+          <Link to="/profesores" className="enlace">Ravenclaw</Link>
+          <Link to="/casas" className="enlace">Slytherin</Link>
+        </div>
         <Route exact path="/" render={()=>{
           return <div>
             <Principal/>
@@ -57,25 +69,25 @@ class App extends React.Component{
         </Route>
         <Route exact path="/personajes" render={()=>{
           return <div>
-            <Personajes personajes={this.state.personajes}/>
+            <Personajes menu="this.state.menuF" personajes={this.state.personajes}/>
           </div>
         }}>
         </Route>
         <Route exact path="/estudiantes" render={()=>{
           return <div>
-            <Estudiantes estudiantes={this.state.estudiantes}/>
+            <Estudiantes menu="this.state.menuF" estudiantes={this.state.estudiantes}/>
           </div>
         }}>
         </Route>
         <Route exact path="/profesores" render={()=>{
           return <div>
-            <Profesores profesores={this.state.profesores}/>
+            <Profesores menu="this.state.menuF" profesores={this.state.profesores}/>
           </div>
         }}>
         </Route>
         <Route exact path="/casas" render={()=>{
           return <div>
-            <Casas casas={this.state.casas}/>
+            <Casas menu={this.menuCasas()}/>
           </div>
         }}>
         </Route>

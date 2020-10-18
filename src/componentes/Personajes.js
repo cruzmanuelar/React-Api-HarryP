@@ -6,12 +6,15 @@ class Personajes extends React.Component{
         super(props);
 
         this.state = {
-            personajes:[]
+            personajes:[],
+            menu:""
         }
     }
 
     componentDidMount(){
-        this.setState({personajes:this.props.personajes})
+        this.setState({personajes:this.props.personajes,menu:this.props.menuF})
+        var propi = document.getElementById('navegacionCasas');
+        propi.style.display = this.state.menu
     }
 
     mostrarPersonajes = () => {

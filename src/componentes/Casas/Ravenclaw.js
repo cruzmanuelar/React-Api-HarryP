@@ -17,6 +17,7 @@ class Ravenclaw extends React.Component{
     render(){
         return(
             <div className="contenedor">
+                {console.log(this.state.ravenclaw)}
                 {this.state.ravenclaw.map(person => (
                     <div key={person.actor} className="caja">
                         <div className="info">

@@ -6,12 +6,15 @@ class Profesores extends React.Component{
         super(props);
 
         this.state = {
-            profesores:[]
+            profesores:[],
+            menu:""
         }
     }
 
     componentDidMount(){
-        this.setState({profesores:this.props.profesores})
+        this.setState({profesores:this.props.profesores,menu:this.props.menuF})
+        var propi = document.getElementById('navegacionCasas');
+        propi.style.display = this.state.menu
     }
 
     mostrarProfesores = () => {

@@ -6,12 +6,15 @@ class Estudiantes extends React.Component{
         super(props);
 
         this.state = {
-            estudiantes:[]
+            estudiantes:[],
+            menu:""
         }
     }
 
     componentDidMount(){
-        this.setState({estudiantes:this.props.estudiantes})
+        this.setState({estudiantes:this.props.estudiantes,menu:this.props.menuF})
+        var propi = document.getElementById('navegacionCasas');
+        propi.style.display = this.state.menu
     }
 
     mostrarEstudiantes = () => {
