@@ -1,26 +1,26 @@
 import React from 'react';
 
-class Personajes extends React.Component{
+class Profesores extends React.Component{
 
     constructor(props){
         super(props);
 
         this.state = {
-            personajes:[]
+            profesores:[]
         }
     }
 
     componentDidMount(){
-        this.setState({personajes:this.props.personajes})
+        this.setState({profesores:this.props.profesores})
     }
 
-    mostrarPersonajes = () => {
+    mostrarProfesores = () => {
 
-        if(this.state.personajes.length === 0) return null;
+        if(this.state.profesores.length === 0) return null;
         
         return(
             <div className="contenedor">
-                {this.state.personajes.map(person => (
+                {this.state.profesores.map(person => (
                     <div key={person.actor} className="caja">
                         <div className="info">
                             <img id="imagen" alt="Imagen" src={person.image}/>
@@ -40,12 +40,12 @@ class Personajes extends React.Component{
         return(
             <div>
                 <div className="Pprincipales">
-                    <h3 className="tituloPP">Personajes</h3>
+                    <h3 className="tituloPP">Profesores</h3>
                 </div>
-                {this.mostrarPersonajes()}
+                {this.mostrarProfesores()}
             </div>
         )
     }
 }
 
-export default Personajes;
+export default Profesores;

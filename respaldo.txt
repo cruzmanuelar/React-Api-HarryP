@@ -1,0 +1,7 @@
+Estilos de la caja media queries
+/* text-align: center;
+    margin-bottom: 1rem;
+    background: var(--main-bg-color);
+    height: auto;
+    box-sizing: border-box;
+    border-radius: 3%; */
