@@ -18,7 +18,7 @@ class Principal extends React.Component{
 
     render(){
         return(
-            <div>
+            <div className="contenedor">
                 <p>Manuel {this.props.parame}</p>
             </div>
         )
