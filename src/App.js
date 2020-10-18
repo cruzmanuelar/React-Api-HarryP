@@ -5,20 +5,22 @@ import Personajes from './componentes/Personajes';
 import Principal from './componentes/Principal';
 import Estudiantes from './componentes/Estudiantes';
 import Profesores from './componentes/Profesores';
+import Casas from './componentes/Casas';
 
 class App extends React.Component{
 
   state = {
     personajes:[],
     estudiantes:[],
-    profesores:[]
+    profesores:[],
+    casas:[]
   }
 
   componentDidMount(){
 
     fetch('http://hp-api.herokuapp.com/api/characters')
-      .then(respuesta => respuesta.json())
-      .then(respuesta => this.setState({personajes: respuesta}))
+    .then(respuesta => respuesta.json())
+    .then(respuesta => this.setState({personajes: respuesta}))
 
     fetch('http://hp-api.herokuapp.com/api/characters/students')
     .then(respuesta => respuesta.json())
@@ -27,6 +29,11 @@ class App extends React.Component{
     fetch('http://hp-api.herokuapp.com/api/characters/staff')
     .then(respuesta => respuesta.json())
     .then(respuesta => this.setState({profesores: respuesta}))
+
+    fetch('http://hp-api.herokuapp.com/api/characters/house/Slytherin')
+    .then(respuesta => respuesta.json())
+    .then(respuesta => this.setState({casas: respuesta}))
+
   }
 
   render(){
@@ -40,7 +47,7 @@ class App extends React.Component{
           <Link to="/personajes" className="enlace">Personajes</Link>
           <Link to="/estudiantes" className="enlace">Estudiantes</Link>
           <Link to="/profesores" className="enlace">Profesores</Link>
-          <Link to="/personajes" className="enlace">Casas</Link>
+          <Link to="/casas" className="enlace">Casas</Link>
         </div>
         <Route exact path="/" render={()=>{
           return <div>
@@ -66,7 +73,12 @@ class App extends React.Component{
           </div>
         }}>
         </Route>
-
+        <Route exact path="/casas" render={()=>{
+          return <div>
+            <Casas casas={this.state.casas}/>
+          </div>
+        }}>
+        </Route>
       </Router>
     )
   }

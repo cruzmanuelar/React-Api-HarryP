@@ -75,6 +75,7 @@ h1{
   display: flex;
   flex-wrap: wrap;
   font-family: 'Architects Daughter', cursive;
+  /* height: 100%; */
 }
 
 .info{
