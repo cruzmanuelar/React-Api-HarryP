@@ -21,11 +21,47 @@ class Casas extends React.Component{
     render(){
         return(
             <React.Fragment>
-                <div className="contenedorImagenes">
-                    <img alt="imgCasa" src={Gry} className="imagenesCasas"></img>
-                    <img alt="imgCasa" src={Hu} className="imagenesCasas"></img>
-                    <img alt="imgCasa" src={Raven} className="imagenesCasas"></img>
-                    <img alt="imgCasa" src={Sy} className="imagenesCasas"></img>
+                <div className="contenedorImagenes2">
+                    <div className="contenedorImagen2">
+                        <img alt="imgCasa" src={Gry} className="imagenesCasas"></img>
+                        <div className="infoTarjeta2">
+                            <div className="textoTarjeta">
+                                <p>Gryffindor</p>
+                                <p>Fundador: Godric Gryffindor</p>
+                                <p>Simbolo: León</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="contenedorImagen2">
+                        <img alt="imgCasa" src={Hu} className="imagenesCasas"></img>
+                        <div className="infoTarjeta2">
+                            <div className="textoTarjeta">
+                                <p>Hufflepuff</p>
+                                <p>Fundador: Helga Hufflepuff</p>
+                                <p>Simbolo: Tejón</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="contenedorImagen2">
+                        <img alt="imgCasa" src={Raven} className="imagenesCasas"></img>
+                        <div className="infoTarjeta2">
+                            <div className="textoTarjeta">
+                                <p>Ravenclaw</p>
+                                <p>Fundador: Rowena Ravenclaw</p>
+                                <p>Simbolo: Águila</p>
+                            </div>
+                        </div>
+                    </div>        
+                    <div className="contenedorImagen2">
+                        <img alt="imgCasa" src={Sy} className="imagenesCasas"></img>
+                        <div className="infoTarjeta2">
+                            <div className="textoTarjeta">
+                                <p>Slytherin</p>
+                                <p>Fundador: Salazar Slytherin</p>
+                                <p>Simbolo: Serpiente</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </React.Fragment>
         )

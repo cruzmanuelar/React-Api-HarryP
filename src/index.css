@@ -81,16 +81,10 @@ h1{
   margin:1%;
   height: 20rem;
   transition: transform .2s;
-  cursor: pointer;
-  opacity: 0.8;
-  -webkit-box-shadow: 0px 0px 9px -1px rgba(255,255,255,1);
-  -moz-box-shadow: 0px 0px 9px -1px rgba(255,255,255,1);
-  box-shadow: 0px 0px 9px -1px rgba(255,255,255,1);
-}
-
-.imagenesCasas:hover{
-  transform: scale(1.05);
   opacity: 1;
+  -webkit-box-shadow: 0px 0px 22px -5px rgba(255,255,255,1);
+  -moz-box-shadow: 0px 0px 22px -5px rgba(255,255,255,1);
+  box-shadow: 0px 0px 22px -5px rgba(255,255,255,1);
 }
 
 .contenedorImagenes{
@@ -147,6 +141,62 @@ h1{
   margin: 0.4rem;
 }
 
+.contenedorImagenes2{
+  display: flex;
+  height: auto;
+  /* position: relative; */
+  flex-wrap: wrap;
+  /* justify-content: center;
+  align-items: center; */
+  background: var(--sec-bg-color);
+}
+
+.contenedorImagen2{
+  width: 23%;
+  margin:1%;
+  position: relative;
+}
+
+.contenedorImagen2 img{
+  width: 100%;
+  height: 20rem;
+}
+
+.textoTarjeta{
+  font-family: 'Architects Daughter', cursive;
+  color: white;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.contenedorImagen2:hover .infoTarjeta2{
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+.infoTarjeta2{
+  position: absolute;
+  bottom: 0.3rem;
+  left: 0.2rem;
+  right: 0;
+  background-color: black;
+  overflow: hidden;
+  width: 100%;
+  height: 99%;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: 0.7s ease;
+  transition: 0.6s ease;
+  margin: 0;
+  border-radius: 1%;
+}
+
 @media screen and (max-width: 900px) {
   .caja{
       width: 23%;
@@ -159,7 +209,7 @@ h1{
       width: 31%;
       margin: 1%;
   }
-  .imagenesCasas{
+  .contenedorImagen2{
     width: 46%;
     margin:2%;
     height: 20rem;
@@ -178,7 +228,7 @@ h1{
       width: 98%;
       margin: 1%;
   }
-  .imagenesCasas{
+  .contenedorImagen2{
     width: 96%;
     margin:2%;
     height: 20rem;
