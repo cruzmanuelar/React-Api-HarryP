@@ -6,6 +6,10 @@ import Principal from './componentes/Principal';
 import Estudiantes from './componentes/Estudiantes';
 import Profesores from './componentes/Profesores';
 import Casas from './componentes/Casas';
+import Gryffindor from './componentes/Casas/Gryffindor';
+import Hufflepuff from './componentes/Casas/Hufflepuff';
+import Ravenclaw from './componentes/Casas/Ravenclaw';
+import Slytherin from './componentes/Casas/Slytherin';
 
 class App extends React.Component{
 
@@ -13,8 +17,11 @@ class App extends React.Component{
     personajes:[],
     estudiantes:[],
     profesores:[],
+    gryffindor:[],
+    hufflepuff:[],
+    ravenclaw:[],
+    slytherin:[],
     casas:[],
-    menuT:"flex",
     menuF:"none"
   }
 
@@ -31,15 +38,22 @@ class App extends React.Component{
     fetch('http://hp-api.herokuapp.com/api/characters/staff')
     .then(respuesta => respuesta.json())
     .then(respuesta => this.setState({profesores: respuesta}))
-  }
 
-  menuCasas = () => {
+    fetch('http://hp-api.herokuapp.com/api/characters/house/gryffindor')
+    .then(respuesta => respuesta.json())
+    .then(respuesta => this.setState({gryffindor: respuesta}))
 
-    // var menuC = document.getElementById('navegacionCasas');
-    // menuC.style.display = 'flex';
+    fetch('http://hp-api.herokuapp.com/api/characters/house/ravenclaw')
+    .then(respuesta => respuesta.json())
+    .then(respuesta => this.setState({ravenclaw: respuesta}))
 
-    console.log("Testa");
+    fetch('http://hp-api.herokuapp.com/api/characters/house/hufflepuff')
+    .then(respuesta => respuesta.json())
+    .then(respuesta => this.setState({hufflepuff: respuesta}))
 
+    fetch('http://hp-api.herokuapp.com/api/characters/house/slytherin')
+    .then(respuesta => respuesta.json())
+    .then(respuesta => this.setState({slytherin: respuesta}))
   }
 
   render(){
@@ -56,10 +70,10 @@ class App extends React.Component{
           <Link to="/casas" className="enlace">Casas</Link>
         </div>
         <div id="navegacionCasas">
-          <Link to="/personajes" className="enlace">Gryffindor</Link>
-          <Link to="/estudiantes" className="enlace">Hufflepuff</Link>
-          <Link to="/profesores" className="enlace">Ravenclaw</Link>
-          <Link to="/casas" className="enlace">Slytherin</Link>
+          <Link to="/gryffindor" className="enlace">Gryffindor</Link>
+          <Link to="/hufflepuff" className="enlace">Hufflepuff</Link>
+          <Link to="/ravenclaw" className="enlace">Ravenclaw</Link>
+          <Link to="/slytherin" className="enlace">Slytherin</Link>
         </div>
         <Route exact path="/" render={()=>{
           return <div>
@@ -87,7 +101,31 @@ class App extends React.Component{
         </Route>
         <Route exact path="/casas" render={()=>{
           return <div>
-            <Casas menu={this.menuCasas()}/>
+            <Casas/>
+          </div>
+        }}>
+        </Route>
+        <Route exact path="/gryffindor" render={()=>{
+          return <div>
+            <Gryffindor gryffindor={this.state.gryffindor}/>
+          </div>
+        }}>
+        </Route>
+        <Route exact path="/hufflepuff" render={()=>{
+          return <div>
+            <Hufflepuff hufflepuff={this.state.hufflepuff}/>
+          </div>
+        }}>
+        </Route>
+        <Route exact path="/ravenclaw" render={()=>{
+          return <div>
+            <Ravenclaw ravenclaw={this.state.ravenclaw}/>
+          </div>
+        }}>
+        </Route>
+        <Route exact path="/slytherin" render={()=>{
+          return <div>
+            <Slytherin slytherin={this.state.slytherin}/>
           </div>
         }}>
         </Route>

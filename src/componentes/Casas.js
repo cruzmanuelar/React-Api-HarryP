@@ -12,14 +12,13 @@ class Casas extends React.Component{
         }
     
         var propi = document.getElementById('navegacionCasas');
-        propi.style.display = this.state.propiedad
+        propi.style.display = this.state.propiedad;
     }
 
     render(){
         return(
             <React.Fragment>
-                {/* <MenuCasas/> */}
-                {/* {this.props.menu} */}
+                <p>HELLOW</p>
             </React.Fragment>
         )
     }
