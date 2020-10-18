@@ -5,3 +5,26 @@ Estilos de la caja media queries
     height: auto;
     box-sizing: border-box;
     border-radius: 3%; */
+
+    
+            // <React.Fragment>
+            //     <div className="Pprincipales">
+            //         <h3 className="tituloPP">Casa: {this.state.nombre}</h3>
+            //     </div>
+            //     <div className="contenedor">
+            //     {this.state.hufflepuff.map(person => (
+            //         <div key={person.actor} className="caja">
+            //             <div className="info">
+            //                 <img id="imagen" alt="Imagen" src={person.image}/>
+            //                 <div className="infoTarjeta">
+            //                     <p><strong>Actor:</strong> {person.actor}</p>
+            //                     <p><strong>Nombre:</strong> {person.name}</p>
+            //                     <p><strong>Especie:</strong> {person.species}</p>
+            //                 </div>
+            //             </div>
+            //         </div>
+            //     ))}
+            //     </div>
+            // </React.Fragment>
+
+            if(this.state.personajes.length === 0) return null;

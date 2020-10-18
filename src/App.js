@@ -64,16 +64,16 @@ class App extends React.Component{
         </div>
         <div className="navegacion">
           <Link to="/" className="enlace">Principal</Link>
-          <Link to="/personajes" className="enlace">Personajes</Link>
-          <Link to="/estudiantes" className="enlace">Estudiantes</Link>
-          <Link to="/profesores" className="enlace">Profesores</Link>
-          <Link to="/casas" className="enlace">Casas</Link>
+          <Link to="/personajes" id="personajes" className="enlace">Personajes</Link>
+          <Link to="/estudiantes" id="estudiantes" className="enlace">Estudiantes</Link>
+          <Link to="/profesores" id="profesores" className="enlace">Profesores</Link>
+          <Link to="/casas" id="casas" className="enlace">Casas</Link>
         </div>
         <div id="navegacionCasas">
-          <Link to="/gryffindor" className="enlace">Gryffindor</Link>
-          <Link to="/hufflepuff" className="enlace">Hufflepuff</Link>
-          <Link to="/ravenclaw" className="enlace">Ravenclaw</Link>
-          <Link to="/slytherin" className="enlace">Slytherin</Link>
+          <Link to="/gryffindor" id="gryffindor" className="enlace">Gryffindor</Link>
+          <Link to="/hufflepuff" id="hufflepuff" className="enlace">Hufflepuff</Link>
+          <Link to="/ravenclaw" id="ravenclaw" className="enlace">Ravenclaw</Link>
+          <Link to="/slytherin" id="slytherin" className="enlace">Slytherin</Link>
         </div>
         <Route exact path="/" render={()=>{
           return <div>
