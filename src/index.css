@@ -76,19 +76,35 @@ h1{
   background: var(--sec-bg-color);
 }
 
-
-.contenedorImagenes img{
+.imagenesCasas{
   width: 23%;
   margin:1%;
   height: 20rem;
+  transition: transform .2s;
+  cursor: pointer;
+}
+
+.imagenesCasas:hover{
+  transform: scale(1.05); 
+}
+
+.contenedorImagenes{
+  padding:2rem;
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: center;
+  align-items: center; */
+  background: var(--sec-bg-color);
+  height: auto;
 }
 
 #imagen{
   width: 9rem;
   height: 9rem;
-  margin: 0.4rem;
+  /* margin: 0.4rem; */
   border-radius: 5%;
 }
+
 
 .contenedor{
   background: var(--sec-bg-color);
@@ -138,6 +154,11 @@ h1{
       width: 31%;
       margin: 1%;
   }
+  .imagenesCasas{
+    width: 46%;
+    margin:2%;
+    height: 20rem;
+  }
 }
 
 @media screen and (max-width: 590px) {
@@ -152,4 +173,10 @@ h1{
       width: 98%;
       margin: 1%;
   }
+  .imagenesCasas{
+    width: 96%;
+    margin:2%;
+    height: 20rem;
+  }
+
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Resultado extends React.Component{
+class ResultadoCasas extends React.Component{
     render(){
         return(
             <React.Fragment>
@@ -26,4 +26,4 @@ class Resultado extends React.Component{
     }
 }
 
-export default Resultado;
+export default ResultadoCasas;

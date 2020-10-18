@@ -21,7 +21,6 @@ class Personajes extends React.Component{
     
     render(){
         return(
-
             <ResultadoP nombre={this.state.nombre} personajes={this.state.personajes}/>
         )
     }

@@ -1,5 +1,5 @@
 import React from 'react';
-import Resultado from '../Resultado';
+import ResultadoCasas from '../ResultadoCasas';
 
 class Slytherin extends React.Component{
 
@@ -18,7 +18,7 @@ class Slytherin extends React.Component{
 
     render(){
         return(
-            <Resultado nombre={this.state.nombre} casa={this.state.slytherin}/>
+            <ResultadoCasas nombre={this.state.nombre} casa={this.state.slytherin}/>
         )
     }
 }

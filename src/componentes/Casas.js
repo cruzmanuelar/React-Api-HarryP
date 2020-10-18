@@ -1,6 +1,9 @@
 import React from 'react';
-// import MenuCasas from './MenuCasas';
 import '../index.css';
+import Gry from '../img/gry.jpg';
+import Hu from '../img/hu.jpg';
+import Raven from '../img/raven.jpg';
+import Sy from '../img/sy.jpg';
 
 class Casas extends React.Component{
 
@@ -18,7 +21,12 @@ class Casas extends React.Component{
     render(){
         return(
             <React.Fragment>
-                <p>HELLOW</p>
+                <div className="contenedorImagenes">
+                    <img alt="imgCasa" src={Gry} className="imagenesCasas"></img>
+                    <img alt="imgCasa" src={Hu} className="imagenesCasas"></img>
+                    <img alt="imgCasa" src={Raven} className="imagenesCasas"></img>
+                    <img alt="imgCasa" src={Sy} className="imagenesCasas"></img>
+                </div>
             </React.Fragment>
         )
     }

@@ -1,6 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom'; 
-import './index.css';
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 import Personajes from './componentes/Personajes';
 import Principal from './componentes/Principal';
 import Estudiantes from './componentes/Estudiantes';
@@ -10,6 +9,7 @@ import Gryffindor from './componentes/Casas/Gryffindor';
 import Hufflepuff from './componentes/Casas/Hufflepuff';
 import Ravenclaw from './componentes/Casas/Ravenclaw';
 import Slytherin from './componentes/Casas/Slytherin';
+import './index.css';
 
 class App extends React.Component{
 
